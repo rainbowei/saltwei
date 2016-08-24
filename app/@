@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行命令</title>
+</head>
+<body>
+<form method="post">
+    <input type="text" name="host" align="center">主机</input>
+      <input type="text" name="command" align="center">命令</input>
+      </br>
+       {% for i in con %}
+             {{ i }}
+       {% endfor %}
+    <button>执行</button>
+    </form>
+</body>
+</html>

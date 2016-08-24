@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行命令</title>
+</head>
+<body>
+<form method="post">
+     <div align='center' > 
+    <input type="text" name="host" align="center">主机</input>
+      <input type="text" name="command" align="center">命令</input>
+    <button>执行</button>
+     </div>
+        <div  style="background:#000; color:#FFF;width: 100%;height: 1000px;margin：0px; paading:0px;">
+      <pre>
+     {%if cont%}
+    {% for k,v in cont.items() %}
+          {{k}} {{v}}
+    {% endfor %}
+         {% endif %}
+     </pre>
+    </div>
+    </form>
+</body>
+</html>
