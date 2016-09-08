@@ -1,0 +1,18 @@
+from  flask  import *
+import  salt.client
+import MySQLdb
+app=Flask(__name__)
+local=salt.client.LocalClient()
+result = local.cmd('minion-02',['grains.items'],[[],])
+def  host_info():
+    for k,v in result.items():
+         for m,n in v.items():
+	      status={
+                   ' get_network_interfaces': n['ip_interfaces']['eth0'][0],
+                    'get_mem_total':n['mem_total'],
+                    'hostname':n['host']
+                     }
+         return status                    
+
+
+print host_info()

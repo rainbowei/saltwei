@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>minion</title>
+</head>
+<body>
+<form method="post">
+     <div align='center' > 
+    <input type="text" name="minion" align="center" value='minion-id'></input>
+    <button>添加</button>
+     <table  style="width: 100%;max-width: 100%;" border=1 bordercolor="#CC0000" height="500px">
+          <tr >
+           <th>ip</th>
+           <th>主机名</th>
+           <th>操作系统</th>
+           <th>cpu型号</th>
+           <th>cpu线程数</th>
+            <th>内存</th>
+                  {%if cont%}
+         {% for i in  cont %}
+                 <tr>
+                 <td> {{cont['ip']}}</td>
+                 <td> {{cont['hostname']}}</td>
+                 <td> {{cont['os']}}</td>
+                 <td> {{cont['cpu']}}</td>
+                 <td> {{cont['cpu_num']}}</td>
+                 <td> {{cont['mem']}}</td>
+                 </tr>
+                {% endfor %}
+                    {%endif%}
+     </table>
+    </form>
+</body>
+</html>

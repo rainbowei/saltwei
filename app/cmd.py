@@ -1,5 +1,6 @@
 from  flask import  *
 import  salt.client
+import  salt.grains
 import MySQLdb
 app=Flask(__name__)
 local=salt.client.LocalClient()
